@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
+import RecentDonations from '../components/donations/RecentDonations'
 import bg from '../images/bg.png'
 
 const Home: NextPage = () => {
@@ -210,6 +211,10 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className='py-10 px-4 md:px-0'>
+        <RecentDonations />
       </section>
     </>
   )
