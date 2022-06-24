@@ -69,7 +69,7 @@ const RecentDonations = () => {
         </div>
       </div>
       <div
-        className='relative mx-auto mt-5 2xl:px-0 flex max-w-screen-xl touch-pan-x snap-x snap-mandatory snap-center md:space-x-5 overflow-x-scroll scroll-smooth xl:overflow-hidden'
+        className='relative mx-auto mt-5 2xl:px-0 flex max-w-screen-xl touch-pan-x snap-x snap-mandatory snap-center md:space-x-5 overflow-x-scroll scroll-smooth xl:overflow-hidden space-x-2 xl:space-x-0'
         ref={carousel}
       >
         {data.map((campaign) => (

@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Image from 'next/image'
 import RecentDonations from '../components/donations/RecentDonations'
 import bg from '../images/bg.png'
+import hrbg from '../images/hrbg4.png'
 
 const Home: NextPage = () => {
   const img1 =
@@ -15,11 +16,11 @@ const Home: NextPage = () => {
   return (
     <>
       <section className='mx-auto max-w-screen-xl px-4 xl:px-0'>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 py-20'>
+        <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 py-20'>
           <div className='flex items-center'>
             <div>
-              <span>We believe that</span>
-              <h1 className='mt-4 text-2xl md:text-6xl font-semibold text-gray-700'>
+              <span>Trust Fund</span>
+              <h1 className='mt-4 text-3xl md:text-5xl font-semibold text-gray-700'>
                 Do good for others and change lives
               </h1>
 
@@ -28,8 +29,10 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className='grow-0'>
-            <div className='h-[500px] bg-gray-300'></div>
+          <div className='grow-0 xl:col-span-2'>
+            <div className='h-[300px] md:h-[300px] xl:h-[800px] w-full relative'>
+              <Image src={hrbg} layout='fill' objectFit='contain' />
+            </div>
           </div>
         </div>
       </section>
