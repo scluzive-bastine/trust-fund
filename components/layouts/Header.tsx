@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useState } from 'react'
 import { RiMenu5Fill } from 'react-icons/ri'
 import MobileDropdown from './MobileDropdown'
@@ -11,13 +12,16 @@ const Header = () => {
   return (
     <>
       {isOpen && <MobileDropdown closeMenu={handleClick} />}
-      <nav className='px-4 '>
+      <nav className='px-4 sticky top-0 z-50 bg-white border-b border-gray-200'>
         <div className='mx-auto max-w-screen-xl flex justify-between flex-grow-0 py-4 items-center'>
           <div className='hidden md:flex'>
             <ul className='flex space-x-5'>
               <li>For individuals</li>
               <li>Charities</li>
               <li>Companies</li>
+              <li>
+                <Link href='/discover'>Discover</Link>
+              </li>
             </ul>
           </div>
           <div>

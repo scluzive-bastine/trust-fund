@@ -6,7 +6,7 @@ interface MobileDropdownProps {
 
 const MobileDropdown = ({ closeMenu }: MobileDropdownProps) => {
   return (
-    <div className='px-4 bg-white absolute top-0 w-full z-50 h-screen'>
+    <div className='px-4 bg-white fixed top-0 w-full z-50 h-screen'>
       <div className='flex justify-end py-4'>
         <button
           className='flex md:hidden hover:bg-gray-100 rounded-full h-12 w-12 items-center justify-center transition duration-150 ease-in-out'

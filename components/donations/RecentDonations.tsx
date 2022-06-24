@@ -73,7 +73,7 @@ const RecentDonations = () => {
         ref={carousel}
       >
         {data.map((campaign) => (
-          <Campaign data={campaign} key={campaign.id} />
+          <Campaign data={campaign} key={campaign.id} width='300px' />
         ))}
       </div>
       <div className='flex justify-center mt-10'>
