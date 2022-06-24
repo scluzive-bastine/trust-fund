@@ -3,6 +3,8 @@ import Image from 'next/image'
 import RecentDonations from '../components/donations/RecentDonations'
 import bg from '../images/bg.png'
 import hrbg from '../images/hrbg4.png'
+import tlbg from '../images/tlbg.svg'
+import tlbg2 from '../images/tlbg2.svg'
 
 const Home: NextPage = () => {
   const img1 =
@@ -78,7 +80,9 @@ const Home: NextPage = () => {
       <section className='mx-auto max-w-screen-xl py-20 px-4 xl:px-0'>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-20'>
           <div>
-            <div className='h-[400px] bg-gray-300'></div>
+            <div className='h-[400px] relative'>
+              <Image src={tlbg} layout='fill' objectFit='contain' />
+            </div>
           </div>
           <div>
             <h1 className='text-2xl md:text-5xl text-gray-500 mb-4 font-semibold'>
@@ -109,7 +113,9 @@ const Home: NextPage = () => {
             </button>
           </div>
           <div>
-            <div className='h-[400px] bg-gray-300'></div>
+            <div className='h-[400px] relative'>
+              <Image src={tlbg2} layout='fill' objectFit='contain' />
+            </div>
           </div>
         </div>
       </section>
