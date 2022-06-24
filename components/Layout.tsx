@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Footer from './layouts/Footer'
 import Header from './layouts/Header'
 const Layout = ({ children }: any) => {
   return (
@@ -6,10 +7,9 @@ const Layout = ({ children }: any) => {
       <Head>
         <title>Trust Fund</title>
       </Head>
-      <main className='relative'>
-        <Header />
-        {children}
-      </main>
+      <Header />
+      <main className='relative'>{children}</main>
+      <Footer />
     </>
   )
 }

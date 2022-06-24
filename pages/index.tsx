@@ -25,6 +25,10 @@ const Home: NextPage = () => {
               <h1 className='mt-4 text-3xl md:text-5xl font-semibold text-gray-700'>
                 Do good for others and change lives
               </h1>
+              <p className='text-gray-500 mt-2'>
+                Doing good for others creates a harmonous life, every little donation helps millions
+                of people
+              </p>
 
               <div className='mt-4'>
                 <button className='btn-primary'>Start a trust fund</button>
@@ -80,7 +84,7 @@ const Home: NextPage = () => {
       <section className='mx-auto max-w-screen-xl py-20 px-4 xl:px-0'>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-20'>
           <div>
-            <div className='h-[400px] relative'>
+            <div className='h-[200px] md:h-[400px] relative'>
               <Image src={tlbg} layout='fill' objectFit='contain' />
             </div>
           </div>
@@ -113,7 +117,7 @@ const Home: NextPage = () => {
             </button>
           </div>
           <div>
-            <div className='h-[400px] relative'>
+            <div className='h-[200px] md:h-[400px] relative'>
               <Image src={tlbg2} layout='fill' objectFit='contain' />
             </div>
           </div>
