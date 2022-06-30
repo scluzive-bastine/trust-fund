@@ -1,12 +1,14 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import RecentDonations from '../components/donations/RecentDonations'
+import { useTrustFundContext } from '../context/context'
 import bg from '../images/bg.png'
 import hrbg from '../images/hrbg4.png'
 import tlbg from '../images/tlbg.svg'
 import tlbg2 from '../images/tlbg2.svg'
 
 const Home: NextPage = () => {
+  const { toggleAuth } = useTrustFundContext()
   const img1 =
     'https://images.unsplash.com/photo-1618754580230-dc55ba127aa2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80'
   const img2 =
@@ -31,7 +33,9 @@ const Home: NextPage = () => {
               </p>
 
               <div className='mt-4'>
-                <button className='btn-primary'>Start a trust fund</button>
+                <button className='btn-primary' onClick={toggleAuth}>
+                  Start a trust fund
+                </button>
               </div>
             </div>
           </div>

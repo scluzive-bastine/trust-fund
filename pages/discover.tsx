@@ -15,7 +15,7 @@ const discover = () => {
       <section className='mx-auto max-w-screen-xl px-4'>
         <div className='py-10'>
           <h1 className='text-3xl font-semibold mb-10'>Charity</h1>
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
+          <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4'>
             {data.slice(0, 8).map((campaign) => (
               <Campaign data={campaign} width='100%' key={campaign.id} />
             ))}

@@ -1,12 +1,19 @@
 import { MdOutlineClose } from 'react-icons/md'
+import { useTrustFundContext } from '../../context/context'
 
 interface MobileDropdownProps {
   closeMenu: () => void
 }
 
 const MobileDropdown = ({ closeMenu }: MobileDropdownProps) => {
+  const { toggleAuth } = useTrustFundContext()
+
+  const handleAuthClick = () => {
+    toggleAuth()
+    closeMenu()
+  }
   return (
-    <div className='px-4 bg-white fixed top-0 w-full z-50 h-screen'>
+    <div className='px-4 bg-white fixed top-0 w-full z-50 h-screen overflow-hidden'>
       <div className='flex justify-end py-4'>
         <button
           className='flex md:hidden hover:bg-gray-100 rounded-full h-12 w-12 items-center justify-center transition duration-150 ease-in-out'
@@ -16,7 +23,7 @@ const MobileDropdown = ({ closeMenu }: MobileDropdownProps) => {
         </button>
       </div>
       <div className='mt-5'>
-        <h1>TRUST FUND</h1>
+        <h1>TRUST FUND Mobile</h1>
         <div className='mt-10'>
           <div className='mb-10'>
             <ul className='flex flex-col space-y-5'>
@@ -26,7 +33,9 @@ const MobileDropdown = ({ closeMenu }: MobileDropdownProps) => {
             </ul>
           </div>
           <div>
-            <button className='btn-primary w-full'>Start a trust fund</button>
+            <button className='btn-primary w-full' onClick={handleAuthClick}>
+              Start a trust fund
+            </button>
           </div>
         </div>
       </div>
